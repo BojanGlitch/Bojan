@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy|Noto+Sans+JP&display=swap');
+
+/* General CSS Rules */
+body {
+  background-color: #e6e6e6;
+}
+
+img {
+  width: 50%;
+  border: 4px solid;
+  padding: 4px;
+  border-color: black;
+  box-shadow: 7px 7px #262626;
+}
+
+h1 {
+  font-size: 32px;
+  color: #111;
+  text-shadow: 2px 3px 2px gray;
+  font-family: 'Notable', sans-serif;
+  background-color: white;
+  width: 7%;
+  padding: 2px 0px 2px 5px;
+}
+
+h2 {
+  font-family: 'Francois One', sans-serif;
+  color: #111;
+  /* background: #e6e6e6; */
+  text-shadow: 1px 2px 1px gray;
+  background-color: white;
+  width: 7.5%;
+}
+
+h3 {
+  font-size: 20px;
+  /* background: #e6e6e6; */
+  text-shadow: 1px 2px 1px gray;
+  color: #111;
+  font-weight: bold;
+  font-style: italic;
+  font-family: 'Francois One', sans-serif;
+}
+
+p {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+
+/* End of General CSS Rules */
+
+
+
+
+/* Beginning of Nav */
+
+nav {
+  font-family: 'Luckiest Guy', cursive;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li:hover:not(.active) {
+  background-color: #111;
+}
+
+/* End of nav design */
+
+main a {
+    color: #808080;
+    background: white;
+    margin-bottom: 5px;
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+
+
+
+/* begin of details design */
+details {
+  width: 50%
+}
+
+details p {
+   font-family: 'Francois One', sans-serif;
+ }
+
+details img {
+  width: 95%;
+}
+
+details:hover {
+  color: black;
+  background-color: #f2f2f2;
+}
+
+summary {
+   font-weight: bold;
+   font-family: 'Noto Sans JP', sans-serif;
+ }
+
+ /* End of details design */
+
+
+
+#ContactImageCSS {
+  border: 4px solid;
+  padding: 4px;
+  border-color: black;
+}
+
+
+.active {
+  background-color: #1ac6ff;
+  background-color: #1ac6ff;
+  transition: background-color .1s ease-in .1s;
+}
+
+/* Function Design classes */
+
+
+.indexBottomLayer {
+    background: rgba(255,255,255,.3);
+  }
+
+.div12 {
+    background-color: white;
+    width: 33%;
+    padding: 2px 0px 2px 5px;
+}
+
+.soccerp {
+  background-color: white;
+  width: 53%;
+  padding: 2px 0px 2px 5px;
+}
+
+.h1name {
+  background-color: white;
+  width: 27%;
+  padding: 2px 0px 2px 5px;
+}
+
+.h1contact {
+  background-color: white;
+  width: 12%;
+  padding: 2px 0px 2px 5px;
+}
+
+.contactbg {
+  background-color: white;
+  width: 13%;
+  padding: 2px 0px 2px 5px;
+}
+
+/* begin of hidden class for visual */
+
+.hidden {
+  position:absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* end of hidden class for visual */
+
+/* end of function design classes */
