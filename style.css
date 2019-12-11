@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Luckiest+Guy|Noto+Sans+JP&display=swap');
 
 /* General CSS Rules */
-
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
 body {
   background-color: #e6e6e6;
   width: 100vw;
@@ -15,47 +15,69 @@ body {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 60px 1fr 20px;
   grid-template-areas:
-  "header header"
-  "main main"
-  "footer footer";
+    "header header"
+    "main main"
+    "footer footer";
+  /* overflow: hidden; */
 }
 
 header {
   grid-area: header;
+  height: 60px;
 }
 
-main{
+main {
   grid-area: main;
+  width: 100%;
+  height: 100%;
 }
 
 section {
   grid-area: content;
 }
-article.layout1 {
+
+.layout1 {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: repeat(2,1fr);
-  grid-template-rows: repeat(3,1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   grid-template-areas:
-  "title content"
-  "title content"
-  "title content";
+    "title section1"
+    ". section2"
+    ". section3";
   background-image: url(MyImageForAboutMe.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.section1, .section2, .section3 {
+  background-color: rgba(0, 0, 0, .2);
+  padding: 15px;
+}
+
+.section1 {
+  grid-area: section1;
+}
+
+.section2 {
+  grid-area: section2;
+}
+
+.section3 {
+  grid-area: section3;
 }
 
 article.layout2 {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: repeat(2,1fr);
-  grid-template-rows: repeat(3,1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   grid-template-areas:
-  "title content"
-  "title content"
-  "title content";
+    "title content"
+    "title content"
+    "title content";
   background-image: url(MyImageForAboutMe3.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -63,18 +85,22 @@ article.layout2 {
 
 h1.Soccerh1 {
   grid-area: title;
-  background-color: rgba(255,255,255,.15)
+  background-color: rgba(255, 255, 255, .15)
 }
 
 footer {
   grid-area: footer;
+  height: 20px;
+  background: white;
 }
 
 h2.grid-title {
   grid-area: title;
+  color: rgb(230, 230, 230);
 }
+
 img {
-  width: 100%;
+  width: 60%;
   border: 4px solid;
   padding: 4px;
   border-color: black;
@@ -95,9 +121,8 @@ h2 {
   color: #111;
   /* background: #e6e6e6; */
   text-shadow: 1px 2px 1px gray;
-  background-color: rgba(255,255,255,.15);
+  background-color: rgba(255, 255, 255, .15);
   background-size: cover;
-
 }
 
 h3 {
@@ -112,16 +137,11 @@ h3 {
 
 p {
   font-family: 'Noto Sans JP', sans-serif;
+  color: #8c8c8c;
 }
 
-
 /* End of General CSS Rules */
-
-
-
-
 /* Beginning of Nav */
-
 nav {
   font-family: 'Luckiest Guy', cursive;
 }
@@ -156,22 +176,19 @@ li:hover:not(.active) {
   transition: background-color .1s ease-in .1s;
 }
 
-
 /* End of nav design */
-
-
 main a {
-    color: #808080;
-    background: white;
-    margin-bottom: 5px;
-    font-family: 'Noto Sans JP', sans-serif;
-  }
+  color: #808080;
+  background: white;
+  margin-bottom: 5px;
+  font-family: 'Noto Sans JP', sans-serif;
+}
 
-  .mainContact {
-    background-image: url(MyImageForContactMe.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
+.mainContact {
+  background-image: url("MyImageForContactMe.JPG");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 /* begin of details design */
 details {
@@ -179,8 +196,8 @@ details {
 }
 
 details p {
-   font-family: 'Francois One', sans-serif;
- }
+  font-family: 'Francois One', sans-serif;
+}
 
 details img {
   width: 95%;
@@ -192,28 +209,16 @@ details:hover {
 }
 
 summary {
-   font-weight: bold;
-   font-family: 'Noto Sans JP', sans-serif;
- }
-
- /* End of details design */
-
-
-/* Function Design classes */
-
-
-.div12 {
-    background-color: rgba(255,255,255,.2);
-
-    /* padding: 2px 0px 2px 5px; */
-    padding: 15px;
-    grid-area: content;
+  font-weight: bold;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
+/* End of details design */
+/* Function Design classes */
 .soccerp {
-  background-color: rgba(255,255,255,.2);
+  background-color: rgba(255, 255, 255, .2);
   width: 100%;
- /* padding: 2px 0px 2px 5px; */
+  /* padding: 2px 0px 2px 5px; */
   grid-area: content;
 }
 
@@ -234,9 +239,8 @@ summary {
 }
 
 /* begin of hidden class for visual */
-
 .hidden {
-  position:absolute;
+  position: absolute;
   left: -10000px;
   top: auto;
   width: 1px;
@@ -245,5 +249,151 @@ summary {
 }
 
 /* end of hidden class for visual */
-
 /* end of function design classes */
+/* begin of media quiry */
+@media only screen and (min-width: 500px) and (max-width: 800px) {
+  body {
+    background-color: #e6e6e6;
+    width: 98%;
+    margin: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 60px 1fr 20px;
+    grid-template-areas:
+      "header header"
+      "main main"
+      "footer footer";
+  }
+
+  .layout1 {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr 3fr 3fr;
+    grid-template-areas:
+      "title"
+      "section1"
+      "section2"
+      "section3";
+    background-image: url(MyImageForAboutMe.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  article.layout2 {
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 6fr;
+    grid-template-areas:
+      "title"
+      "content";
+    background-image: url(MyImageForAboutMe3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .h1name {
+    background-color: white;
+    text-align: center;
+  }
+
+  h1.Soccerh1 {
+    grid-area: title;
+    background-color: rgba(255, 255, 255, .15);
+    text-align: center;
+  }
+
+  h2.grid-title {
+    grid-area: title;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  body {
+    background-color: #e6e6e6;
+    width: 98%;
+    margin: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 1fr 20px;
+    grid-template-areas:
+      "header header"
+      "main main"
+      "footer footer";
+  }
+
+  main a {
+    color: #808080;
+    background: white;
+    margin-bottom: 5px;
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+  .layout1 {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr 3fr 3fr;
+    grid-template-areas:
+      "title"
+      "section1"
+      "section2"
+      "section3";
+    background-image: url(MyImageForAboutMe.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  article.layout2 {
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 6fr;
+    grid-template-areas:
+      "title"
+      "content";
+    background-image: url(MyImageForAboutMe3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .h1name {
+    background-color: white;
+    text-align: center;
+  }
+
+  h1.Soccerh1 {
+    grid-area: title;
+    background-color: rgba(255, 255, 255, .15);
+    text-align: center;
+  }
+
+  h2.grid-title {
+    grid-area: title;
+    text-align: center;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+
+  li {
+    float: none;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+}
+
+  /* end of media quiry */
